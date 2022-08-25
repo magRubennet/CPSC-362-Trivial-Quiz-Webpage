@@ -1,1 +1,1 @@
-# CPSC-362-Trivial-Quiz-Webpage
+# CPSC-362-Trivial-Webpage
