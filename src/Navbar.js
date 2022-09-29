@@ -5,16 +5,16 @@ import './Navbar.css';
 export default function Navbar() {
     return (
     <><nav>
-            {/* <Link to="/"></Link>
+            
+        </nav>
+        <div class="NavbarEx">
             <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/game">Game</Link></li>
-            </ul> */}
+            </ul>
 
-        </nav><div class="NavbarEx">
-
-                <a href="Home" class="Leftbox">Home</a>
-                <a href="#">Game</a>
+                {/* <a href="Home" class="Leftbox">Home</a>
+                <a href="#">Game</a> */}
                 {/* <a href="#">Next</a>
                 <a href="#" class="Rightbox">Tutorial</a> */}
 
