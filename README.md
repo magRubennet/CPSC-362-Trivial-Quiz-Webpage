@@ -19,4 +19,4 @@ Team Members:
 1. Install [Node.js](https://nodejs.org/en/download/)
 2. Open the project terminal
 3. Install indepndencies using '`sudo npm i`'
-3. Start the local host using '`sudo npm start`'
+3. Start the local host using '`sudo npm start`' 
