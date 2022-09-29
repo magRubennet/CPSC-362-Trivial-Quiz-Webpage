@@ -1,0 +1,31 @@
+.NavbarEx {
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+  }
+  .NavbarEx a {
+    float: left;
+    display: block;
+    color: white;
+    text-align:s center;
+    padding: 14px 20px;
+    text-decoration: none;
+  } 
+  /* Right-aligned link */
+  .NavbarExample a.Rightbox {
+    float: right;
+  }
+  
+  /* Change color on hover */
+  .NavbarExample a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Active/current link */
+  .NavbarExample a.Leftbox {
+    background-color: #666;
+    color: white;
+  }
