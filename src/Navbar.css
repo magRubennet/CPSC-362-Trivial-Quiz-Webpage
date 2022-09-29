@@ -1,6 +1,6 @@
 .NavbarEx {
     overflow: hidden;
-    background-color: #333;
+    background-color: rgb(66, 101, 116);
     position: sticky;
     position: -webkit-sticky;
     top: 0;
@@ -29,3 +29,4 @@
     background-color: #666;
     color: white;
   }
+  
