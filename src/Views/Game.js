@@ -1,46 +1,45 @@
-import React, { useState } from 'react'
-import Axios from "axios"
+import React, { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom';
 import './Game.css'
+import { Button } from '@chakra-ui/react'
 
 export default function Game() {
-    const [trivia, setTrivia] = useState({correct_answer: "", incorrect_answers: ""})
-    const [questions, setQuestions] = useState("")
+    const { state: { trivia } = {} } = useLocation();
+    const [count, setCount] = useState(0);
+    const [questions, setQuestions] = useState()
 
-    const getTrivia = async() => {
-        try {
-            const response = await Axios.get("https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=multiple");
-            setTrivia(response.data.results[0]);
-            console.log(trivia)
-        } catch (error) {
-            console.log(error);
-            setTrivia(null);
-        }
+    const shuffleQuestions = (temp) => {
+        // TODO: implement shuffled questions array
+        return temp;
     };
+
+    useEffect(() => {
+        setQuestions(shuffleQuestions([trivia[count].correct_answer, ...trivia[count].incorrect_answers]))
+        console.log(questions);
+    }, [count])
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setCount(count + 1);
+    }
     
-    // const shuffleQuestions = () => {
-    //     const temp = [trivia.correct_answer, ...trivia.incorrect_answers];
-    //     // TODO: implement shuffled questions array
-    //     setQuestions(temp);
-    // };
-
-    const loadTrivia = () => {
-        getTrivia();
-        // shuffleQuestions();
-    };
-
     return (
         <div>
-            <button onClick={loadTrivia}> load </button>
-
             <h1 className="center">Trivia Game</h1>
 
-            <h3 className="center">{trivia.question}</h3>
-            <ul className="answer-buttons">
-                <li> <button>{trivia.correct_answer}</button> </li>
-                <li> <button>{trivia.incorrect_answers[0]}</button> </li>
-                <li> <button>{trivia.incorrect_answers[1]}</button> </li>
-                <li> <button>{trivia.incorrect_answers[2]}</button> </li>
-            </ul>
+            <h2 className="center">{trivia[count].question}</h2>
+            
+            { questions ? (
+                <form onSubmit={(e) => handleSubmit(e)}>
+                    <Button type="submit">{questions[0]}</Button> <br></br>
+                    <Button type="submit">{questions[1]}</Button> <br></br>
+                    <Button type="submit">{questions[2]}</Button> <br></br>
+                    <Button type="submit">{questions[3]}</Button> <br></br>
+                </form>
+                ) : (
+                <button></button>
+            )}
+
         </div>
     );
 }
