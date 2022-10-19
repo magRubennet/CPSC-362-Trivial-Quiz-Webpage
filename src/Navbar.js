@@ -12,7 +12,7 @@ export default function Navbar() {
             <TabList mb='1em'>
               <Tab _selected={{ color: 'white', bg: 'blue.500' }}> <Link to="/">Home</Link> </Tab>
               <Tab _selected={{ color: 'white', bg: 'green.400' }}> <Link to="/GameSetup">Game</Link> </Tab>
-              <Tab _selected={{ color: 'white', bg: 'green.400' }}> <Link to="*">Three</Link> </Tab>
+              <Tab _selected={{ color: 'white', bg: 'green.400' }}> <Link to="*">Temp</Link> </Tab>
             </TabList>
           
         </Tabs>
