@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom';
 import './Game.css'
-import { Button } from '@chakra-ui/react'
+import { Button, ButtonGroup } from '@chakra-ui/react'
 
 export default function Game() {
     const { state: { trivia } = {} } = useLocation();
@@ -31,10 +31,12 @@ export default function Game() {
             
             { questions ? (
                 <form onSubmit={(e) => handleSubmit(e)}>
-                    <Button type="submit">{questions[0]}</Button> <br></br>
-                    <Button type="submit">{questions[1]}</Button> <br></br>
-                    <Button type="submit">{questions[2]}</Button> <br></br>
-                    <Button type="submit">{questions[3]}</Button> <br></br>
+                    <ButtonGroup variant='outline' spacing='8'>
+                        <Button type="submit">{questions[0]}</Button> <br></br>
+                        <Button type="submit">{questions[1]}</Button> <br></br>
+                        <Button type="submit">{questions[2]}</Button> <br></br>
+                        <Button type="submit">{questions[3]}</Button> <br></br>
+                    </ButtonGroup>
                 </form>
                 ) : (
                 <button></button>
