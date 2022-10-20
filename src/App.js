@@ -7,17 +7,9 @@ import GameSetup from "./Views/GameSetup";
 import FinalScore from "./Views/FinalScore"
 import { Route, Routes } from 'react-router-dom';
 
-import { ChakraProvider } from '@chakra-ui/react'
-
-
 function App() {
   return (
     <>
-
-        <ChakraProvider>
-          <any />
-        </ChakraProvider>
-
       <Navbar />
       <div className="App">
         <Routes>
