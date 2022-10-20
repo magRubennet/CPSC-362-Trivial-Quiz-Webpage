@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './Game.css'
-import { Button, ButtonGroup } from '@chakra-ui/react'
+import { Button, SimpleGrid, Center, Box } from '@chakra-ui/react'
 
 export default function Game() {
     const { state: { trivia } = {} } = useLocation();
     const [count, setCount] = useState(0);
-    const [questions, setQuestions] = useState()
+    const [questions, setQuestions] = useState();
+    const [score, setScore] = useState(0);
+    const navigate = useNavigate()
 
     const shuffleQuestions = (temp) => {
         // TODO: implement shuffled questions array
@@ -15,29 +17,39 @@ export default function Game() {
 
     useEffect(() => {
         setQuestions(shuffleQuestions([trivia[count].correct_answer, ...trivia[count].incorrect_answers]))
-        console.log(questions);
     }, [count])
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setCount(count + 1);
+        if (e.target.value == trivia[count].correct_answer)
+            setScore(score + 1)
+        if (count == trivia.length-1) {
+            navigate('/FinalScore', {state:{ score:score }});
+        }
+        else
+            setCount(count + 1);
     }
     
     return (
         <div>
             <h1 className="center">Trivia Game</h1>
+            <br></br>
 
-            <h2 className="center">{trivia[count].question}</h2>
-            
+            <Center> <h2>{trivia[count].question}</h2> </Center>
+            <br></br>
+
+            <Center> <h2>Score = {score}</h2>  </Center>
+            <br></br>
+
             { questions ? (
-                <form onSubmit={(e) => handleSubmit(e)}>
-                    <ButtonGroup variant='outline' spacing='8'>
-                        <Button type="submit">{questions[0]}</Button> <br></br>
-                        <Button type="submit">{questions[1]}</Button> <br></br>
-                        <Button type="submit">{questions[2]}</Button> <br></br>
-                        <Button type="submit">{questions[3]}</Button> <br></br>
-                    </ButtonGroup>
-                </form>
+                <Center>
+                    <SimpleGrid columns={2} spacing={5}>
+                        <Box height='50px'> <Button onClick={(e) => handleSubmit(e)} type="submit" value={questions[0]}>{questions[0]}</Button> </Box>
+                        <Box height='50px'> <Button onClick={(e) => handleSubmit(e)} type="submit" value={questions[1]}>{questions[1]}</Button> </Box>
+                        <Box height='50px'> <Button onClick={(e) => handleSubmit(e)} type="submit" value={questions[2]}>{questions[2]}</Button> </Box>
+                        <Box height='50px'> <Button onClick={(e) => handleSubmit(e)} type="submit" value={questions[3]}>{questions[3]}</Button> </Box>
+                    </SimpleGrid>
+                </Center>
                 ) : (
                 <button></button>
             )}
