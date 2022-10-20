@@ -44,10 +44,10 @@ export default function Game() {
             { questions ? (
                 <Center>
                     <SimpleGrid columns={2} spacing={5}>
-                        <Box height='50px'> <Button onClick={(e) => handleSubmit(e)} type="submit" value={questions[0]}>{questions[0]}</Button> </Box>
-                        <Box height='50px'> <Button onClick={(e) => handleSubmit(e)} type="submit" value={questions[1]}>{questions[1]}</Button> </Box>
-                        <Box height='50px'> <Button onClick={(e) => handleSubmit(e)} type="submit" value={questions[2]}>{questions[2]}</Button> </Box>
-                        <Box height='50px'> <Button onClick={(e) => handleSubmit(e)} type="submit" value={questions[3]}>{questions[3]}</Button> </Box>
+                        <Box height='50px'> <Button size='lg' onClick={(e) => handleSubmit(e)} type="submit" value={questions[0]}>{questions[0]}</Button> </Box>
+                        <Box height='50px'> <Button size='lg' onClick={(e) => handleSubmit(e)} type="submit" value={questions[1]}>{questions[1]}</Button> </Box>
+                        <Box height='50px'> <Button size='lg' onClick={(e) => handleSubmit(e)} type="submit" value={questions[2]}>{questions[2]}</Button> </Box>
+                        <Box height='50px'> <Button size='lg' onClick={(e) => handleSubmit(e)} type="submit" value={questions[3]}>{questions[3]}</Button> </Box>
                     </SimpleGrid>
                 </Center>
                 ) : (
