@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
 import './Game.css'
-import { Button, SimpleGrid, Center, Box } from '@chakra-ui/react'
+import { Button, SimpleGrid, Center, Box, Heading } from '@chakra-ui/react'
 
 export default function Game() {
     const { state: { trivia } = {} } = useLocation();
@@ -32,34 +32,38 @@ export default function Game() {
     
     return (
         <div>
-        <Box
-        color='black'
-        bgGradient="linear(to-l, #FF9760, #FFE57A)"
-        minWidth='max-content'
-        minH={'665px'}
-        > 
-            <h1 className="center">Trivia Game</h1>
-            <br></br>
+            <Box
+                color='black'
+                bgGradient="linear(to-l, #FF9760, #FFE57A)"
+                minWidth='max-content'
+                minH={'665px'}
+                textAlign='center'
+            > 
+                <br></br>
 
-            <Center> <h2>{trivia[count].question}</h2> </Center>
-            <br></br>
+                <Heading size='2xl'>Trivia Game</Heading>
 
-            <Center> <h2>Score = {score}</h2>  </Center>
-            <br></br>
+                <br></br>
 
-            { questions ? (
-                <Center>
-                    <SimpleGrid columns={2} spacing={5}>
-                        <Box height='50px'> <Button size='lg' onClick={(e) => handleSubmit(e)} type="submit" value={questions[0]}>{questions[0]}</Button> </Box>
-                        <Box height='50px'> <Button size='lg' onClick={(e) => handleSubmit(e)} type="submit" value={questions[1]}>{questions[1]}</Button> </Box>
-                        <Box height='50px'> <Button size='lg' onClick={(e) => handleSubmit(e)} type="submit" value={questions[2]}>{questions[2]}</Button> </Box>
-                        <Box height='50px'> <Button size='lg' onClick={(e) => handleSubmit(e)} type="submit" value={questions[3]}>{questions[3]}</Button> </Box>
-                    </SimpleGrid>
-                </Center>
-                ) : (
-                <button></button>
-            )}
-    </Box>
+                <Heading size='lg'>{trivia[count].question}</Heading>
+                <br></br>
+
+                <Heading size='md'>Score = {score}</Heading>
+                <br></br>
+
+                { questions ? (
+                    <Center>
+                        <SimpleGrid columns={2} spacing={5}>
+                            <Box height='50px'> <Button size='lg' onClick={(e) => handleSubmit(e)} type="submit" value={questions[0]}>{questions[0]}</Button> </Box>
+                            <Box height='50px'> <Button size='lg' onClick={(e) => handleSubmit(e)} type="submit" value={questions[1]}>{questions[1]}</Button> </Box>
+                            <Box height='50px'> <Button size='lg' onClick={(e) => handleSubmit(e)} type="submit" value={questions[2]}>{questions[2]}</Button> </Box>
+                            <Box height='50px'> <Button size='lg' onClick={(e) => handleSubmit(e)} type="submit" value={questions[3]}>{questions[3]}</Button> </Box>
+                        </SimpleGrid>
+                    </Center>
+                    ) : (
+                    <button></button>
+                )}
+            </Box>
         </div>
     );
 }
