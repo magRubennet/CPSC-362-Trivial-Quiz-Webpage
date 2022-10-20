@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Axios from "axios"
 import { useNavigate } from 'react-router-dom'
-import { Button } from '@chakra-ui/react'
+import { Button, Stack, Select, Container } from '@chakra-ui/react'
 
 export default function GameSetup() {
     const navigate = useNavigate()
@@ -19,8 +19,20 @@ export default function GameSetup() {
     };
 
     return (
-        <form>
-            <Button onClick={(e) => handleSubmit(e)}> Play </Button>
-        </form>
+        <>
+            <br></br>
+            <br></br>
+            <br></br>
+            <Container padding='6'>
+                <form onSubmit={(e) => handleSubmit(e)}>
+                    <Stack spacing={6} direction='column'>
+                        <Select placeholder='Choose a topic...' size='lg' />
+                        <Select placeholder='Choose difficulty...' size='lg' />
+                        <Button type='submit'> Play </Button>
+                    </Stack> 
+                </form>
+            </Container>
+        </>
+        
     );
 }
