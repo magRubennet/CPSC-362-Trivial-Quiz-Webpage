@@ -32,6 +32,12 @@ export default function Game() {
     
     return (
         <div>
+        <Box
+        color='black'
+        bgGradient="linear(to-l, #FF9760, #FFE57A)"
+        minWidth='max-content'
+        minH={'665px'}
+        > 
             <h1 className="center">Trivia Game</h1>
             <br></br>
 
@@ -53,7 +59,7 @@ export default function Game() {
                 ) : (
                 <button></button>
             )}
-
+    </Box>
         </div>
     );
 }
