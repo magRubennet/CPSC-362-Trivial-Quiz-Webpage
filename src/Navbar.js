@@ -42,6 +42,21 @@ export default function Navbar() {
               <Link to="/GameSetup">Game</Link>
                 
               </Button>
+
+              <Button 
+                fontSize={'sm'}
+                fontWeight={600}
+                color={'black'}
+                bg={'teal.400'}
+                href={'#'}
+                _hover={{bg: 'purple.300',}}
+                border='1px' borderColor='black'
+              >
+                
+              <Link to="/Content">Content</Link>
+                
+              </Button>
+
             </ButtonGroup>
 
             <Spacer />
