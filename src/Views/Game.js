@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
 import './Game.css'
-import { Button, SimpleGrid, Center, Box, Heading, useToast, position } from '@chakra-ui/react'
+import { Button, SimpleGrid, Center, Box, Heading, useToast } from '@chakra-ui/react'
 
 export default function Game() {
     const { state: { trivia } = {} } = useLocation();
@@ -28,27 +28,27 @@ export default function Game() {
 
     // https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
     const shuffleAnswers = (a) => {
-        // for (let i = a.length - 1; i > 0; i--) {
-        //     const j = Math.floor(Math.random() * (i + 1));
-        //     [a[i], a[j]] = [a[j], a[i]];
-        // }
+        for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+        }
         return a;
     };
 
     useEffect(() => {
         setAnswers(shuffleAnswers([trivia[count].correct_answer, ...trivia[count].incorrect_answers]))
-    }, [count])
+    }, [count, trivia])
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (e.target.value == trivia[count].correct_answer) {
+        if (e.target.value === trivia[count].correct_answer) {
             setScore(score + 1);
             correctToast();
         }
         else
             incorrectToast();
 
-        if (count == trivia.length-1) {
+        if (count === trivia.length-1) {
             navigate('/FinalScore', {state:{ score:score }});
         }
         else

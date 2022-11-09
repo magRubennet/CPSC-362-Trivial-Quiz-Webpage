@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import { ButtonGroup, Spacer, Box, Flex, Button, useDisclosure,} from '@chakra-ui/react';
+import { ButtonGroup, Spacer, Box, Flex, Button} from '@chakra-ui/react';
 
 export default function Navbar() {
     return (
