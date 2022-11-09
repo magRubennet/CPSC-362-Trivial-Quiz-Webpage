@@ -9,7 +9,7 @@ export default function GameSetup() {
     const handleSubmit = async(e) => {
         try {
             e.preventDefault();
-            const response = await Axios.get("https://opentdb.com/api.php?amount=5&category=15&difficulty=easy&type=multiple");
+            const response = await Axios.get("https://opentdb.com/api.php?amount=5&category=15&difficulty=easy&type=multiple&encode=base64");
             console.log(response.data.results)
             navigate('/Game', {state:{ trivia:response.data.results }});
 
