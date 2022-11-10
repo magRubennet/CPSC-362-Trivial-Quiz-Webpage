@@ -44,41 +44,44 @@ export default function ContactPage(){
                 <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
                   <WrapItem>
                     <Box>
-                      <Heading>Contact Page</Heading>
-                      <Text mt={{ sm: 3, md: 3, lg: 5 }} color="black.500">
+                      {/* <Heading>Contact Page</Heading> */}
+                      <Text mt={{ sm: 3, md: 3, lg: 5 }} color="black.500" fontSize='4xl'>
                         Fill up the form beside to contact
                       </Text>
 {/* --------------------------------------------------------------------------------------------- */}
                       <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
-                        <VStack pl={0} spacing={3} alignItems="flex-start">
+                        <VStack pl={0} spacing={30} alignItems="flex-start">
                           <Button
                             size="md"
                             height="48px"
-                            width="200px"
+                            width="500px"
                             variant="ghost"
-                            color="#DCE2FF"
+                            color="#000000"
+                            fontSize='2xl'
                             _hover={{ border: '2px solid #1C6FEB' }}
-                            leftIcon={<MdPhone color="#1970F1" size="20px" />}>
+                            leftIcon={<MdPhone color="#1970F1" size="30px" />}>
                             +1 (123)456-78910
                           </Button>
                           <Button
                             size="md"
                             height="48px"
-                            width="200px"
+                            width="500px"
                             variant="ghost"
-                            color="#DCE2FF"
+                            color="#000000"
+                            fontSize='2xl'
                             _hover={{ border: '2px solid #1C6FEB' }}
-                            leftIcon={<MdEmail color="#1970F1" size="20px" />}>
+                            leftIcon={<MdEmail color="#1970F1" size="30px" />}>
                             hello@abc.com
                           </Button>
                           <Button
                             size="md"
                             height="48px"
-                            width="200px"
+                            width="500px"
                             variant="ghost"
-                            color="#DCE2FF"
+                            color="#000000"
+                            fontSize='2xl'
                             _hover={{ border: '2px solid #1C6FEB' }}
-                            leftIcon={<MdLocationOn color="#1970F1" size="20px" />}>
+                            leftIcon={<MdLocationOn color="#1970F1" size="30px" />}>
                             Fullerton, California
                           </Button>
                         </VStack>
@@ -86,8 +89,8 @@ export default function ContactPage(){
 {/* --------------------------------------------------------------------------------------------- */}
                       <HStack
                         mt={{ lg: 10, md: 10 }}
-                        spacing={5}
-                        px={5}
+                        spacing={50}
+                        px={129}
                         alignItems="flex-start">
                         <IconButton
                           aria-label="facebook"
@@ -95,7 +98,7 @@ export default function ContactPage(){
                           size="lg"
                           isRound={true}
                           _hover={{ bg: '#0D74FF' }}
-                          icon={<MdFacebook size="28px" />}
+                          icon={<MdFacebook size="38px" />}
                         />
                         <IconButton
                           aria-label="github"
@@ -103,7 +106,7 @@ export default function ContactPage(){
                           size="lg"
                           isRound={true}
                           _hover={{ bg: '#0D74FF' }}
-                          icon={<BsGithub size="28px" />}
+                          icon={<BsGithub size="38px" />}
                         />
                         <IconButton
                           aria-label="discord"
@@ -111,7 +114,7 @@ export default function ContactPage(){
                           size="lg"
                           isRound={true}
                           _hover={{ bg: '#0D74FF' }}
-                          icon={<BsDiscord size="28px" />}
+                          icon={<BsDiscord size="38px" />}
                         />
                       </HStack>
                     </Box>
