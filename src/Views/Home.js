@@ -7,7 +7,7 @@ export default function Home() {
 
         <div> 
 
-            <Container bg="#9DC4FB" maxW="full" mt={0} bg="#FB9C37" centerContent overflow="hidden">
+            <Container bg="#FB9C37" maxW="full" mt={0}  centerContent overflow="hidden">
                 <Flex>
                     <Box
                bg="#FFD117"
@@ -15,7 +15,7 @@ export default function Home() {
               color="black"
               borderRadius="lg"
               m={{ sm: 4, md: 16, lg: 100 }}
-              p={{ sm: 5, md: 5, lg: 190 }}>
+              p={{ sm: 5, md: 5, lg: 190.5 }}>
                         <Text as='b' fontSize='40' >
                             <Center>   The Greatest Trivia Game of All time </Center>
                         </Text> 

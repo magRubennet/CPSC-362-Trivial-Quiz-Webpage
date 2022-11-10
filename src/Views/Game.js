@@ -59,7 +59,8 @@ export default function Game() {
         <div>
             <Box
                 color='black'
-                bgGradient="linear(to-l, #FF9760, #FFE57A)"
+                bgGradient="linear(to-l, #C1FFB7, #B7D8FF)"
+                //#FF9760, #FFE57A
                 minWidth='max-content'
                 minH={'665px'}
                 textAlign='center'
