@@ -53,7 +53,7 @@ export default function Navbar() {
                 border='1px' borderColor='black'
               >
                 
-              <Link to="/Content">Content</Link>
+              <Link to="/Contact">Contact</Link>
                 
               </Button>
 
