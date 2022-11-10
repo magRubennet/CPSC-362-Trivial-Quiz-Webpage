@@ -1,33 +1,11 @@
 import React from 'react'
-import { Link } from "react-router-dom"
-import { ButtonGroup, Spacer, Box, Text, Center, Flex, Button, useDisclosure,} from '@chakra-ui/react';
-import { FormControl, FormLabel, Heading, IconButton, Input, InputGroup, InputLeftElement, Stack, Textarea, Tooltip, useClipboard, useColorModeValue, VStack,} from '@chakra-ui/react';
-import { Container, Wrap, WrapItem, HStack, WrapIem,} from '@chakra-ui/react';
-import { IconName, BsGithub, BsLinkedin, BsPerson, BsTwitter, BsDiscord,} from 'react-icons/bs';
+import { Box, Text, Center, Flex, Button} from '@chakra-ui/react';
+import { FormControl, FormLabel, Heading, IconButton, Input, InputGroup, InputLeftElement, Textarea, VStack} from '@chakra-ui/react';
+import { Container, Wrap, WrapItem, HStack } from '@chakra-ui/react';
+import { BsGithub, BsPerson, BsDiscord,} from 'react-icons/bs';
 import { MdEmail, MdOutlineEmail, MdPhone, MdLocationOn, MdFacebook,} from 'react-icons/md';
 
-
-
 export default function ContactPage(){
-   // const { hasCopied, onCopy } = useClipboard('example@example.com');
-
-    //  return(
-
-    //   <div>
-    //      <Box
-    //          color='black'
-    //          bgGradient="linear(to-l, #FF9760, #FFE57A)"
-    //          minWidth='max-content'
-    //          minH={'665px'}
-    //      >
-    //         <Text as='b' fontSize='40'>
-    //           <Center>  Contact Page </Center>
-    //         </Text> 
-    //      </Box> 
-    //   </div>
-
-    //  );
-
     return (
         <Container bg="#9DC4FB" maxW="full" mt={0} centerContent overflow="hidden">
           <Flex>
@@ -46,7 +24,7 @@ export default function ContactPage(){
                     <Box>
                       {/* <Heading>Contact Page</Heading> */}
                       <Text mt={{ sm: 3, md: 3, lg: 5 }} color="black.500" fontSize='4xl'>
-                        Fill up the form beside to contact
+                        Let us know why this is the greatest trivia game of all time!
                       </Text>
 {/* --------------------------------------------------------------------------------------------- */}
                       <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
@@ -170,7 +148,6 @@ export default function ContactPage(){
 
                 </Wrap>
               </Box>
-
             </Box>
           </Flex>
         </Container>
