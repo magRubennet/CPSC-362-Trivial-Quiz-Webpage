@@ -47,7 +47,7 @@ export default function GameSetup() {
             <Container padding='6'>
                 <form onSubmit={(e) => handleSubmit(e)}>
                     <Stack spacing={6} direction='column'>
-                        <Select  border='1px' borderColor='black' placeholder='Choose a topic...' size='lg' name="category">
+                        <Select  border='1px' borderColor='black' placeholder='Choose a topic...' size='lg' name="category" required>
                             {allCategories ? (
                                 allCategories && allCategories.map(item => 
                                     <option value={item.id}>{item.name}</option>)
@@ -56,7 +56,7 @@ export default function GameSetup() {
                                 )
                             };
                         </Select>
-                        <Select  border='1px' borderColor='black' placeholder='Choose difficulty...' size='lg' name="difficulty">
+                        <Select  border='1px' borderColor='black' placeholder='Choose difficulty...' size='lg' name="difficulty" required>
                             <option value="easy">Easy</option>
                             <option value="medium">Medium</option>
                             <option value="hard">Hard</option>
