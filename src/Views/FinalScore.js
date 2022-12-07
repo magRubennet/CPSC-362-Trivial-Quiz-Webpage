@@ -1,6 +1,7 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom';
-import { Box, Center, Container, Heading} from '@chakra-ui/react';
+import { Box, Center, Container, Heading, Button} from '@chakra-ui/react';
+import { FaFacebook, FaTwitter } from 'react-icons/fa'
 
 export default function Game() {
     const { state: { score } = {} } = useLocation();
@@ -21,12 +22,19 @@ export default function Game() {
                   m={{ sm: 4, md: 16, lg: 61 }}
                   p={{ sm: 5, md: 5, lg: 250 }}>
                      <Heading ><Center> 
-                         {/* Congratulations. Your score is {score} */}
                     </Center></Heading>
-                     Congratulations. Your score is {score}
+                     Congratulations. Your score is {score}. You are amazing!
+                     <br></br>
+                     <br></br>
+                     Share your score and let everyone know why this is the greatest trivia game of all time!
+                     <Button colorScheme='facebook' leftIcon={<FaFacebook />}>
+                        Facebook
+                    </Button>
+                    <Button colorScheme='twitter' leftIcon={<FaTwitter />}>
+                        Twitter
+                    </Button>
                 </Box>
             </Container> 
-             {/* Congratulations. Your score is {score} */}
         </div>
     );
 }
