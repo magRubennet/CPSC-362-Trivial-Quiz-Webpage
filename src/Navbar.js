@@ -10,7 +10,8 @@ export default function Navbar() {
             minWidth='max-content' 
             alignItems='center' 
             gap='2'
-            bgGradient="linear(to-l, #FF5900, #FFD117)"
+            bgGradient="linear(to-l, #F9B872, #FAE7A5)"
+            //bgGradient="linear(to-l, #FF5900, #FFD117)"
             minH={'40px'}
             py={{ base: 2 }}
             px={{ base: 4 }}

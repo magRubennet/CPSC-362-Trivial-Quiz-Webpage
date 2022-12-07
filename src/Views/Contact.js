@@ -5,13 +5,14 @@ import { Container, Wrap, WrapItem, HStack } from '@chakra-ui/react';
 import { BsGithub, BsPerson, BsDiscord,} from 'react-icons/bs';
 import { MdEmail, MdOutlineEmail, MdPhone, MdLocationOn, MdFacebook,} from 'react-icons/md';
 
+//borderRadius="lg"
 export default function ContactPage(){
     return (
-        <Container bg="#9DC4FB" maxW="full" mt={0} centerContent overflow="hidden">
+        <Container bg="#FAE7A5" maxW="full" mt={0} centerContent overflow="hidden">
           <Flex>
             <Box
-            //   bg="#02054B"
-              bgGradient="linear(to-l, #FF9760, #FFE57A)"
+               bg="#B6E1E7"
+            //  bgGradient="linear(to-l, #FF9760, #FFE57A)"
               color="black"
               borderRadius="lg"
               m={{ sm: 4, md: 16, lg: 10 }}
@@ -22,13 +23,12 @@ export default function ContactPage(){
                 <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
                   <WrapItem>
                     <Box>
-                      {/* <Heading>Contact Page</Heading> */}
                       <Text mt={{ sm: 3, md: 3, lg: 5 }} color="black.500" fontSize='4xl'>
-                        Let us know why this is the greatest trivia game of all time!
+                      Let us know why this is the greatest trivia game of all time! 
                       </Text>
 {/* --------------------------------------------------------------------------------------------- */}
                       <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
-                        <VStack pl={0} spacing={30} alignItems="flex-start">
+                        <VStack pl={0} spacing={30} alignItems="flex-start" px={385}>
                           <Button
                             size="md"
                             height="48px"
@@ -68,7 +68,7 @@ export default function ContactPage(){
                       <HStack
                         mt={{ lg: 10, md: 10 }}
                         spacing={50}
-                        px={129}
+                        px={510}
                         alignItems="flex-start">
                         <IconButton
                           aria-label="facebook"
@@ -83,7 +83,7 @@ export default function ContactPage(){
                           variant="ghost"
                           size="lg"
                           isRound={true}
-                          _hover={{ bg: '#0D74FF' }}
+                          _hover={{ bg: '#D5D5D5' }}
                           icon={<BsGithub size="38px" />}
                         />
                         <IconButton
@@ -91,20 +91,20 @@ export default function ContactPage(){
                           variant="ghost"
                           size="lg"
                           isRound={true}
-                          _hover={{ bg: '#0D74FF' }}
+                          _hover={{ bg: '#5865F2' }}
                           icon={<BsDiscord size="38px" />}
                         />
                       </HStack>
                     </Box>
                   </WrapItem>
 {/* --------------------------------------------------------------------------------------------- */}
-                  <WrapItem>
-                    <Box bg="white" borderRadius="lg">
+                  <WrapItem>   
+                    <Box bg="#B6E1E7" p={4} px={529}>
                       <Box m={8} color="#0B0E3F">
                         <VStack spacing={5}>
                           <FormControl id="name">
                             <FormLabel>Your Name</FormLabel>
-                            <InputGroup borderColor="#E0E1E7">
+                            <InputGroup bgColor="White" borderColor="#E0E1E7">
                               <InputLeftElement
                                 pointerEvents="none"
                                 children={<BsPerson color="gray.800" />}
@@ -114,7 +114,7 @@ export default function ContactPage(){
                           </FormControl>
                           <FormControl id="name">
                             <FormLabel>Mail</FormLabel>
-                            <InputGroup borderColor="#E0E1E7">
+                            <InputGroup bgColor="White" borderColor="#E0E1E7">
                               <InputLeftElement
                                 pointerEvents="none"
                                 children={<MdOutlineEmail color="gray.800" />}
@@ -125,6 +125,7 @@ export default function ContactPage(){
                           <FormControl id="name">
                             <FormLabel>Message</FormLabel>
                             <Textarea
+                            bgColor="White"
                               borderColor="gray.300"
                               _hover={{
                                 borderRadius: 'gray.300',

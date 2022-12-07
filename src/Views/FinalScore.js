@@ -9,13 +9,13 @@ export default function Game() {
         <div>
 
             <Container 
-            bg="#70A3DE" 
+            bg="#F9B872" 
             maxW="full" 
             mt={0} 
             centerContent 
             overflow="hidden">
                 <Box
-                  bg="#A4DE70"
+                  bg="#B7D8FF"
                   color="black"
                   borderRadius="lg"
                   m={{ sm: 4, md: 16, lg: 61 }}
